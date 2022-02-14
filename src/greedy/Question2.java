@@ -50,6 +50,6 @@ public class Question2 {
                 count++;
             }
         }
-        System.out.println(+result);
+        System.out.println(result);
     }
 }
