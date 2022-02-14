@@ -1,7 +1,7 @@
 package greedy;
 
 /*
-Greedy Algorithm Question 4 - 1이 될  까지
+Greedy Algorithm Question 4 - 1이 될 때까지
 어떠한 수 N이 1이 될 때 까지 다음의 두 과정 중 하나를 반복적으로 선택하여 수행하려고 한다.
 단, 두 번째 연산은 N이 K로 나누어 떨어질 때만 선택할 수 있다.
     1. N에서 1을 뺀다.
