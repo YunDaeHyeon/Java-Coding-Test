@@ -37,38 +37,26 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Question1 {
+    static int[] dx = {0, 0, -1, 1};
+    static int[] dy = {-1,1, 0, 0};
+    static char[] moveTypes = {'L', 'R', 'U', 'D'};
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
         int x = 1, y = 1;
-        String[] ba; // 방향
-        ba = br.readLine().split(" ");
-        for(int i = 0 ; i < ba.length; i++){
-            switch(ba[i]){
-                case "R":
-                    if(y>N) break;
-                    y++;
-                    break;
-                case "L":
-                    y--;
-                    if(y<=0) {
-                        y++;
-                        break;
-                    }
-                    break;
-                case "U":
-                    x--;
-                    if(x<=0) {
-                        x++;
-                        break;
-                    }
-                    break;
-                case "D":
-                    if(x>N) break;
-                    x++;
-                    break;
+        int N = Integer.parseInt(br.readLine());
+        String[] plans = br.readLine().split(" ");
+        for(int i = 0; i < plans.length; i++){
+            for(int j = 0; j < moveTypes.length; j++){
+                if(plans[i].charAt(0) == moveTypes[j]){
+                     int nx = x + dx[j];
+                     int ny = y + dy[j];
+                    if(x < 1 || x > N || y < 1 || y > N) continue;
+                    x = nx;
+                    y = ny;
+                }
             }
         }
-        System.out.println(x+" "+y);
+        System.out.println((x+1)+" "+(y+1));
+
     }
 }
