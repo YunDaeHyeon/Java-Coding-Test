@@ -2,7 +2,7 @@ package dfs;
 import java.util.Stack;
 public class DFS_Stack {
     static boolean[] visited = new boolean[8];
-    static int[][] graph = {{},{1, 2, 3},{5, 6},{1, 4, 7},{3, 7},{2},{2},{3,4}};
+    static int[][] graph = {{},{1, 2, 3},{5, 6},{1, 4, 7},{3, 7},{2},{2},{3,4}}; // 인접리스트
     static Stack<Integer> stack = new Stack<>();
     public static void main(String[] args) {
         stack.push(1);

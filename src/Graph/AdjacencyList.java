@@ -30,13 +30,16 @@ class Adj{
 //가중치가 없는 그래프(연결리스트)
 public class AdjacencyList{
     public static void main(String[] args) throws IOException {
-        int V = 5;
+        int V = 7;
         Adj adj = new Adj(V);
         adj.createEdge(1, 2);
         adj.createEdge(1, 3);
         adj.createEdge(2, 4);
-        adj.createEdge(3, 4);
-        adj.createEdge(4, 5);
+        adj.createEdge(2, 5);
+        adj.createEdge(6, 4);
+        adj.createEdge(6, 5);
+        adj.createEdge(3, 7);
+        adj.createEdge(6, 7);
 
         adj.print();
     }
