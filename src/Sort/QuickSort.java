@@ -13,11 +13,13 @@ public class QuickSort {
     public static void quickSort(int[] arr, int start, int end){
         // 배열, 시작, 끝에 해당하는 변수를 보낸 뒤 리턴값을 받는다.
         int part = partition(arr, start, end);
+
+        // 파티션 쪼개기 (분할)
         if(start<part-1){ // 시작점이 끝점 - 1보다 작으면
-            quickSort(arr,start,part-1);
+            quickSort(arr,start,part-1); // 파티션 쪼개기 ( 왼쪽 )
         }
         if(end>start){ // 끝점이 시작점보다 크면
-            quickSort(arr, part, end);
+            quickSort(arr, part, end); // 파티션 쪼개기 ( 오른쪽 )
         }
     }
 
