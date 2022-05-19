@@ -5,7 +5,7 @@ public interface List<E> {
     // 리스트에 요소를 추가한다.
     // 만약, 리스트가 중복을 허용하지 않을 경우. 리스트에 이미 중복되는 요소가 있다면 true를,
     // 중복되는 요소가 없으면 false를 반환.
-    boolean add(E value);
+    boolean add(E value); // 오버라이딩은 메소드 이름이 같아도, 파라미터가 다르면 다른 메소드
 
     // 리스트 특정 위치에 요소를 추가. (특정 위치 및 이후의 요소들은 한 칸씩 뒤로 밀린다.)
     void add(int index, E value);
